@@ -59,11 +59,13 @@ A = [1 2 3 -9 5 6;
   grid("on")
   
   %Ερώτημα Δ
+  %Υποερώτημα 1
   file = fopen('data.dat','r');
-  [Data,COUNT] = fscanf ( file,'%d', [2 Inf]);  
+  [Data,COUNT] = fscanf ( file,'%d', [5 8]);  
   disp(Data)
   
-  %Υποερώτημα 1
+  
+  Data = reshape(Data,2,20);
   Data = Data';  
   Data = reshape(Data,5,8);
   Data = Data(:, [1,5,2,6,3,7,4,8]); 
